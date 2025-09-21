@@ -1,0 +1,183 @@
+{
+  "name" : "ROLE_SYSTEM",
+  "rank" : 1,
+  "#class": "Account.Role",
+  "permission": [
+    {
+      "name": "System:Git:import",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:record",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:record.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:create",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:count",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:count.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:commit",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:delete.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:read",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:read.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:put",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:put.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:patch.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:page",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:page.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:property.delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:list",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:list.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:rename",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:import",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:record",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:record.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:create",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:count",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:count.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:commit",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:delete.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:read",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:read.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:put",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:put.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:patch.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:page",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:page.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action::property.delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:list",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:list.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Git:Action:rename",
+      "#class": "Account.Permission"
+    }
+  ]
+}
