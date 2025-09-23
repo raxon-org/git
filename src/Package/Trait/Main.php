@@ -44,10 +44,23 @@ trait Main {
                 if($notification){
                     $explode = explode('safe.directory', $notification, 2);
                     if(array_key_exists(1, $explode)){
-                        $command_safe = 'git config --global --add safe.directory ' . $explode[1];
-                        ddd($command_safe);
+                        $command_safe = 'git config --global --add safe.directory' . $explode[1];
+                        Core::execute($object, $command_safe, $output, $notification);
+                        if($output){
+                            echo $output . PHP_EOL;
+                        }
+                        if($notification){
+                            echo $notification . PHP_EOL;
+                        }                        
                     }
-                    echo $notification . PHP_EOL;
+                    echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
+                    Core::execute($object, $command, $output, $notification);                
+                    if($output){
+                        echo $output . PHP_EOL;
+                    }
+                    if($notification){
+                        echo $notification . PHP_EOL;
+                    }
                 }
                 $command = 'cd ' . $repository->directory . ' && git commit -a -m "' . $options->message . '"';
                 echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
