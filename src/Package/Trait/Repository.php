@@ -29,6 +29,12 @@ trait Repository {
                 'directory' => $options->directory
             ]            
         ]);
+        if(!$response){            
+            $record = (object) [
+                'directory' => $options->directory,                
+            ];
+            $response = $node->create($class, $node->role_system(), $record);
+        }
         ddd($response);
     }
 }
