@@ -62,6 +62,15 @@ trait Main {
                         }
                     }        
                 }
+                $command = 'cd ' . $repository->directory . ' && git add .';
+                echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
+                Core::execute($object, $command, $output, $notification);
+                if($output){
+                    echo $output . PHP_EOL;
+                }
+                if($notification){
+                    echo $notification . PHP_EOL;
+                }
                 $command = 'cd ' . $repository->directory . ' && git commit -a -m "' . $options->message . '"';
                 echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
                 Core::execute($object, $command, $output, $notification);
