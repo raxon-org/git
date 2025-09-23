@@ -27,7 +27,7 @@ trait Main {
                 $test_dir = $file->url . '.git' . $object->config('ds');
                 if(Dir::exist($test_dir)){
                     //add $file->url to 
-                    $command = 'app raxon/git repository add -directory="' . $test_dir . '"';
+                    $command = 'app raxon/git repository add -directory="' . $file->url . '"';
                     Core::execute($object, $command, $output, $notification);
                     if($output){
                         echo $output . PHP_EOL;
