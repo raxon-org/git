@@ -36,8 +36,10 @@ trait Main {
         if($response && array_key_exists('list', $response)){
             foreach($response['list'] as $repository){
                 $command = 'cd ' . $repository->directory . ' && git pull';
-                echo Cli::info('Command', ['uppercase' => true]) . $command . PHP_EOL;
+                echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
                 Core::execute($object, $command, $output, $notification);
+                d($output);
+                ddd($notification);
                 if($output){
                     echo $output . PHP_EOL;
                 }
@@ -45,7 +47,7 @@ trait Main {
                     echo $notification . PHP_EOL;
                 }
                 $command = 'cd ' . $repository->directory . ' && git commit -a -m "' . $options->message . '"';
-                echo Cli::info('Command', ['uppercase' => true]) . $command . PHP_EOL;
+                echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
                 Core::execute($object, $command, $output, $notification);
                 if($output){
                     echo $output . PHP_EOL;
@@ -54,7 +56,7 @@ trait Main {
                     echo $notification . PHP_EOL;
                 }
                 $command = 'cd ' . $repository->directory . ' && git push';
-                echo Cli::info('Command', ['uppercase' => true]) . $command . PHP_EOL;
+                echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
                 Core::execute($object, $command, $output, $notification);
                 if($output){
                     echo $output . PHP_EOL;
