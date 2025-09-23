@@ -1,0 +1,61 @@
+{
+    "System": {
+        "Git": {
+            "create": {
+                "validate": {
+                    "uuid": [
+                        {
+                            "is.uuid": true
+                        }
+                    ],
+                    "directory": [
+                        {
+                            "is.unique": {
+                                "class": "System.Git",
+                                "attribute": [
+                                    "directory"                                    
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "put": {
+                "validate": {
+                    "uuid": [
+                        {
+                            "is.uuid": true
+                        }
+                    ],
+                    "directory": [
+                        {
+                            "is.unique": {
+                                "class": "System.Git",
+                                "attribute": [
+                                    "directory"                                    
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "patch": {
+                "uuid": [
+                        {
+                            "is.uuid": true
+                        }
+                    ],
+                    "directory": [
+                        {
+                            "is.unique": {
+                                "class": "System.Git",
+                                "attribute": [
+                                    "directory"                                    
+                                ]
+                            }
+                        }
+                    ]
+            }
+        }
+    }
+}

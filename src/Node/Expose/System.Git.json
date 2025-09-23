@@ -1,0 +1,182 @@
+{
+    "System": {
+        "Git": {
+            "count": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "create": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "list": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "page": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "patch": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "put": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "read": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            },
+            "record": {
+                "output": [
+                    {
+                        "role": "ROLE_SYSTEM",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    },
+                    {
+                        "role": "ROLE_ADMIN",
+                        "property": [
+                            "uuid",
+                            "#class",
+                            "directory",                            
+                            "options"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
