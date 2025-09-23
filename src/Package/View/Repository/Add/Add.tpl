@@ -1,1 +1,1 @@
-{{Package.Raxon.Git:Repository:add()}}
+{{Package.Raxon.Git:Repository:add(flags(), options())}}

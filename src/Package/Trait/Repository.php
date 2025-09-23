@@ -15,12 +15,21 @@ trait Repository {
     /**
      * @throws Exception
      */
-    public function add(): void
+    public function add(object $flags, object $options): void
     {
         Core::interactive();
+        if(!property_exists($options, 'directory')){
+            throw new Exception('Option directory not set...');
+        }
         $object = $this->object();
-
-        ddd('add repository');
+        $class = 'System.Git';
+        $node = new Node($object);
+        $response = $node->record($class, $node->role_system(), [
+            'filter' => [
+                'directory' => $options->directory
+            ]            
+        ]);
+        ddd($response);
     }
 }
 
