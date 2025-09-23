@@ -1,1 +1,1 @@
-{{Package.Raxon.Git:Main:sync()}}
+{{Package.Raxon.Git:Main:sync(flags(), options())}}
