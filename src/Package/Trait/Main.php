@@ -3,6 +3,7 @@ namespace Package\Raxon\Git\Trait;
 
 use Raxon\App;
 
+use Raxon\Module\Cli;
 use Raxon\Module\Core;
 use Raxon\Module\Dir;
 use Raxon\Module\File;
@@ -15,7 +16,7 @@ trait Main {
     /**
      * @throws Exception
      */
-    public function sync(): void
+    public function sync(object $flags, object $options): void
     {
         Core::interactive();
         $object = $this->object();
@@ -29,7 +30,40 @@ trait Main {
                 'limit' => 100000                
             ]
         );
-        ddd($response);
+        if(!property_exists($options, 'message')){
+            $options->message = 'update ' . date('Y-m-d H:i:s');
+        }
+        if($response && array_key_exists('list', $response)){
+            foreach($response['list'] as $repository){
+                $command = 'cd ' . $repository->directory . ' && git pull';
+                echo Cli::info('Command', ['uppercase' => true]) . $command . PHP_EOL;
+                Core::execute($object, $command, $output, $notification);
+                if($output){
+                    echo $output . PHP_EOL;
+                }
+                if($notification){
+                    echo $notification . PHP_EOL;
+                }
+                $command = 'cd ' . $repository->directory . ' && git commit -a -m "' . $options->message . '"';
+                echo Cli::info('Command', ['uppercase' => true]) . $command . PHP_EOL;
+                Core::execute($object, $command, $output, $notification);
+                if($output){
+                    echo $output . PHP_EOL;
+                }
+                if($notification){
+                    echo $notification . PHP_EOL;
+                }
+                $command = 'cd ' . $repository->directory . ' && git push';
+                echo Cli::info('Command', ['uppercase' => true]) . $command . PHP_EOL;
+                Core::execute($object, $command, $output, $notification);
+                if($output){
+                    echo $output . PHP_EOL;
+                }
+                if($notification){
+                    echo $notification . PHP_EOL;
+                }
+            }
+        }        
     }
 }
 
