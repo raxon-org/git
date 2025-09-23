@@ -44,7 +44,8 @@ trait Main {
                 if($notification){
                     $explode = explode('safe.directory', $notification, 2);
                     if(array_key_exists(1, $explode)){
-                        ddd($explode);
+                        $command_safe = 'git config --global --add safe.directory ' . $explode[1];
+                        ddd($command);
                     }
                     echo $notification . PHP_EOL;
                 }
