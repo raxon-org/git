@@ -37,13 +37,15 @@ trait Main {
             foreach($response['list'] as $repository){
                 $command = 'cd ' . $repository->directory . ' && git pull';
                 echo Cli::info('Command', ['uppercase' => true]) . ' ' . $command . PHP_EOL;
-                Core::execute($object, $command, $output, $notification);
-                d($output);
-                ddd($notification);
+                Core::execute($object, $command, $output, $notification);                
                 if($output){
                     echo $output . PHP_EOL;
                 }
                 if($notification){
+                    $explode = explode('safe.directory', $notification, 2);
+                    if(array_key_exists(1, $explode)){
+                        ddd($explode);
+                    }
                     echo $notification . PHP_EOL;
                 }
                 $command = 'cd ' . $repository->directory . ' && git commit -a -m "' . $options->message . '"';
