@@ -21,7 +21,7 @@ trait Main {
         $object = $this->object();
 
         $dir = new Dir();
-        $read = $dir->read('/', true);
+        $read = $dir->read('/mnt/Vps3/Mount/Domain/');
         ddd($read);
     }
 }
