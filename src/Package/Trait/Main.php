@@ -33,6 +33,18 @@ trait Main {
         if(!property_exists($options, 'message')){
             $options->message = 'update ' . date('Y-m-d H:i:s');
         }
+        if(!property_exists($options, 'without-key')){
+            $options->without_key = false;
+        }
+        if($options->without_key === false){
+            $source = '/mnt/Vps3/Mount/Data/Ssh/id_ed25519';
+            $target = '/root/.ssh/id_ed25519';
+            File::copy($source, $target);
+            File::chmod($target, 0600);
+            $source = '/mnt/Vps3/Mount/Data/Ssh/id_ed25519.pub';
+            $target = '/root/.ssh/id_ed25519.pub';
+            File::copy($source, $target);
+        }
         if($response && array_key_exists('list', $response)){
             foreach($response['list'] as $repository){
                 $command = 'cd ' . $repository->directory . ' && git pull';
