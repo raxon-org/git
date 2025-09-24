@@ -17,11 +17,10 @@ trait Setup {
     public function git_install(): void
     {
         Core::interactive();
-//        $command = 'curl -fsSL https://deno.land/install.sh | sh';
-//        exec($command, $output);
-//        echo implode(PHP_EOL, $output) . PHP_EOL;
         $object = $this->object();
-        d('Installing git ...');    
+        /**
+         * scan dir if node System.Git has count: 0.
+         */
     }
 }
 
