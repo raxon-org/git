@@ -2,5 +2,5 @@
 {{if(!is.empty($register))}}
 {{Package.Raxon.Git:Import:role.system()}}
 {{Package.Raxon.Git:Setup:git.install()}}
-{{Package.Raxon.Git:Main:sync()}}
+{{Package.Raxon.Git:Main:sync(flags(), options())}}
 {{/if}}
