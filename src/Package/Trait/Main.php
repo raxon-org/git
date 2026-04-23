@@ -16,7 +16,7 @@ trait Main {
     /**
      * @throws Exception
      */
-    public function sync(object $flags, object $options): void
+    public function git_sync(object $flags, object $options): void
     {
         Core::interactive();
         $object = $this->object();
