@@ -36,6 +36,7 @@ trait Main {
         if(!property_exists($options, 'without_key')){
             $options->without_key = false;
         }
+        ddd($options);
         if($options->without_key === false){
             $source = '/mnt/Vps3/Mount/Data/Ssh/id_ed25519';
             $target = '/root/.ssh/id_ed25519';
