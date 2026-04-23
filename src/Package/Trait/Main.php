@@ -33,7 +33,7 @@ trait Main {
         if(!property_exists($options, 'message')){
             $options->message = 'update ' . date('Y-m-d H:i:s');
         }
-        if(!property_exists($options, 'without-key')){
+        if(!property_exists($options, 'without_key')){
             $options->without_key = false;
         }
         if($options->without_key === false){
