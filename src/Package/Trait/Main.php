@@ -33,11 +33,10 @@ trait Main {
         if(!property_exists($options, 'message')){
             $options->message = 'update ' . date('Y-m-d H:i:s');
         }
-        if(!property_exists($options, 'without_key')){
-            $options->without_key = false;
+        if(!property_exists($options, 'without-key')){
+            $options->{'without-key'} = false;
         }
-        ddd($options);
-        if($options->without_key === false){
+        if($options->{'without-key'} === false){
             $source = '/mnt/Vps3/Mount/Data/Ssh/id_ed25519';
             $target = '/root/.ssh/id_ed25519';
             if(!File::exist($target)){
